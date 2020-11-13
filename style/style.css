@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+}
+
+.board {
+  width: 75vmin;
+  height: 75vmin;
+  padding: 0.5%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (calc(100% / 8))[8];
+      grid-template-rows: repeat(8, calc(100% / 8));
+  -ms-grid-columns: (calc(100% / 8))[8];
+      grid-template-columns: repeat(8, calc(100% / 8));
+  -webkit-box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.4);
+  background: url("../assets/board.svg") no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .board {
+    width: 95vmin;
+    height: 95vmin;
+  }
+}
+
+.cell {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.cell .pieces {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.hold {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background: #dae0e2;
+  border: dashed 3px #da0707;
+}
+
+.invisible {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  opacity: 0.3;
+}
+
+.hovered {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 3px dashed #da0707;
+}
+/*# sourceMappingURL=style.css.map */
